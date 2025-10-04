@@ -3,7 +3,7 @@
   <!-- Common properties -->
   <PropertyGroup>
     <!--Target Framework version.-->
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
 
     <!--Root namespace.-->
     <RootNamespace>Meetings</RootNamespace>
