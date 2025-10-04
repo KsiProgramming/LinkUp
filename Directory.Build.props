@@ -3,10 +3,10 @@
   <!-- Common properties -->
   <PropertyGroup>
     <!--Target Framework version.-->
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
 
     <!--Root namespace.-->
-    <RootNamespace>Meetings</RootNamespace>
+    <RootNamespace>LinkUp</RootNamespace>
 
     <!--Setting this to true enables the usage of the latest version of C# language features.-->
     <AcceleratBuilnInVisualStudio>true</AcceleratBuilnInVisualStudio>
