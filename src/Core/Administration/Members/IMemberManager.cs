@@ -2,7 +2,7 @@
 
 public interface IMemberManager
 {
-    void Create(CreateMemberCommand command);
+    Task<Guid> Create(CreateMemberCommand command);
 
-    void Find(MemberQuery query);
+    Task<Member> Find(MemberQuery query);
 }

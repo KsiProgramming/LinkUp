@@ -2,5 +2,5 @@
 
 public class MemberQuery
 {
-    public Guid? MemberId { get; set; }
+    public Guid? Id { get; set; }
 }

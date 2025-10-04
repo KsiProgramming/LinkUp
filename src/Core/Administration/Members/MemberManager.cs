@@ -2,13 +2,20 @@
 
 public class MemberManager : IMemberManager
 {
-    public void Create(CreateMemberCommand command)
+    private readonly IMemberRepository repository;
+
+    public MemberManager(IMemberRepository repository) { this.repository = repository; }
+
+    public async Task<Guid> Create(CreateMemberCommand command)
     {
-        Console.WriteLine($"Creating member: {command.Name} with ID: {command.MemberId}");
+        var memeberToAdd = new Member(command.MemberId, command.Login, command.Email, command.FirstName, command.LastName, command.Name);
+        await this.repository.AddAsync(memeberToAdd);
+
+        return memeberToAdd.Id;
     }
 
-    public void Find(MemberQuery query)
+    public async Task<Member> Find(MemberQuery query)
     {
-        Console.WriteLine($"Retrieving member with ID: {query.MemberId}");
+        return await this.repository.GetByIdAsync(query.Id!.Value);
     }
 }
